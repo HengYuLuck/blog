@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        iframe{
+
+        iframe {
             width: 100%;
             min-height: 80vh;
+        }
+        h3{
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-<h1>Hello world! 阿浩</h1>
-<h6>
+<h1>Hello world! 我是阿里浩</h1>
+
+<h3>
     我要评论:
-</h6>
+</h3>
 <div id="vcomments"></div>
 <!-- 评论功能 -->
 </body>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src='js/Valine.js'></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -30,14 +35,15 @@
         appKey: '2GtlsNyiNqEBRkoPOvIUd9JR'
     })
 </script>
-</html>
 <!--统计功能-->
 <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?c5d241e01f4c1a67514a8f96b7fc5c63";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+</html>
+
