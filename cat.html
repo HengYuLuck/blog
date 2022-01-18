@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>标题</title>
+    <style>
+        html, body, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .layout1 {
+            zoom: 1;
+
+            width: 600px; /*11*(40+4)+1*/
+            white-space: nowrap;
+
+        }
+
+        .layout1.even {
+            margin-left: 27px;
+        }
+
+        .layout1:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .layout2 {
+            margin-left: 1%;
+
+            border-radius: 50%;
+            width: 8%;
+            /*height: 40px;*/
+            background-color: black;
+            float: left;
+        }
+
+        .layout2::before {
+            content: '';
+            padding-top: 100%;
+            float: left;
+        }
+
+        .layout2::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .wall {
+            background-color: blue;
+        }
+
+        .cat {
+            background-color: yellow;
+        }
+
+        @keyframes lt {
+
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+    //11*11的平面空间
+    var plane = new Array(11).fill(new Array(11).fill(0));
+
+    //html绘制平面空间,生成HTML结构
+    function drawPlane(plane) {
+        setItem.layout = 0;
+
+        function setItem(item) {
+            var outerDiv = '';
+            setItem.layout++;
+            for (var i in item) {
+                var pointDiv = '<div class="layout' + setItem.layout + (i % 2 ? ' even' : ' odd') + '">' + (
+                    Object.prototype.toString.call(item[i]) === '[object Array]' ? setItem(item[i]) : ''
+                ) + '</div>';
+                outerDiv += pointDiv;
+            }
+            setItem.layout--;
+            return outerDiv;
+        }
+
+        document.body.innerHTML = setItem(plane);
+    };drawPlane(plane);
+
+    //获取所有的点,添加点击事件
+    var points = document.getElementsByClassName('layout2');
+    for (var i = 0; i < points.length; i++) {
+        points[i].addEventListener('click', function (e) {
+            var ele = e.path[0];
+            if (!ele.className.match(/wall|cat/g)) {
+                ele.className += ' wall';
+                catGo();
+            }
+        });
+    }
+
+    //猫,包含它的的坐标
+    var cat = { //索引从0开始
+        x: 5, y: 5,
+        position: function () {
+            return this.y * 11 + this.x
+        }
+    };
+
+    function catInit() {
+        cat.x = 5;
+        cat.y = 5;
+        for (var index = 0; index < points.length; index++) {
+            points[index].className = points[index].className.replace(' wall', '');
+
+            if(Math.random()<0.07){
+                points[index].className += ' wall';
+            }
+        }
+        points[cat.position()].className = points[cat.position()].className.replace(' wall', '');
+        points[cat.position()].className += ' cat';
+    }
+    catInit();
+
+    // 猫开始行动;
+    // 猫有六个方向可以去,左上,右上,右,右下,左下,左;
+    // 判断猫无处可走,或已走出空间结束
+    function catGo() {
+        //走最近的方向
+        // 左上:y-1,x可能-1;右上:y-1,x可能+1....通过父级标签的奇偶判断
+
+        //猫离开当前位置
+        points[cat.position()].className = points[cat.position()].className.replace(' cat', '');
+
+        //对于不同的奇偶行,猫朝着同一方向前进的定义不同(朝上或朝下前进时)
+
+        function to(direction) {
+            var isEven = !!points[cat.position()].parentElement.className.match('even');
+            switch (direction) {
+                case 'LT':
+                    cat.x -= isEven ? 0 : 1;
+                    cat.y -= 1;
+                    break;
+                case 'RT':
+                    cat.x += isEven ? 1 : 0;
+                    cat.y -= 1;
+                    break;
+                case 'R':
+                    cat.x += 1;
+                    break;
+                case 'RB':
+                    cat.x += isEven ? 1 : 0;
+                    cat.y += 1;
+                    break;
+                case 'LB':
+                    cat.x -= isEven ? 0 : 1;
+                    cat.y += 1;
+                    break;
+                case 'L':
+                    cat.x -= 1;
+                    break;
+                default:
+                    throw '参数错误'
+            }
+        }
+
+        //判断6个方向是否有墙
+        var directions = ['LT', 'R', 'RB', 'LB', 'L', 'LT'];
+        //绕着6个方向走一圈,对应猫实际探测的相对方向
+        var detection = ['LT', 'RT', 'R', 'RB', 'LB', 'L'];
+        //能够到达的方向
+        var canTo = [];
+        for (var j in directions) {
+            to(directions[j]);
+            if (cat.x < 0 || cat.x > 10 || cat.y < 0 || cat.y > 10) {
+                console.log(detection[j]);  //猫向detection[j]走就赢了
+                alert('猫赢了');
+                catInit();
+                return
+            } else {
+                if (!points[cat.position()].className.match(' wall')) {
+                    canTo.push(detection[j]);
+                }
+            }
+        }
+        to('R');
+        if (canTo.length === 0) {
+            alert('你赢了');
+            catInit();
+            return
+        }
+
+        //行动路线加权重//距离边缘距近加权,距离路障距离近减权
+        function priority() {
+            //各个方向上的权重,值越大约好
+            var directionsPriority = {};
+            var catNowPosition;
+            for (var i in canTo) {
+                var time = 0;
+                catNowPosition = {x: cat.x, y: cat.y};
+                directionsPriority[canTo[i]] = loop(canTo[i]);
+            }
+
+            function loop(d) {
+                for (; ;) {
+                    to(d);
+                    time++;
+                    if (cat.x < 0 || cat.x > 10 || cat.y < 0 || cat.y > 10) {
+                        catReset();
+                        return 1 / time;
+                    }
+                    if (points[cat.position()].className.match(' wall')) {
+                        catReset();
+                        return - 1 / time;
+                    }
+                }
+            }
+
+            function catReset() {
+                cat.x = catNowPosition.x;
+                cat.y = catNowPosition.y;
+            }
+
+            return directionsPriority
+        }
+
+        var directionsPriority = priority();
+        //最小值对应的方向
+        var max = -2;
+        var maxKey = '';
+        for (var n in directionsPriority) {
+            if (directionsPriority[n] > max) {
+                max = directionsPriority[n];
+                maxKey = n;
+            }
+        }
+        var directionsArr = [maxKey];
+        //有可能多个方向权重同时最大,随机一个方向前进
+        for (var g in directionsPriority) {
+            if (directionsPriority[g] === max && g !== maxKey) {
+                directionsArr.push(g);
+            }
+        }
+        to(directionsArr[(Math.random() * directionsArr.length) | 0]);
+
+        points[cat.position()].className += ' cat';
+
+    }
+</script>
+</html>
