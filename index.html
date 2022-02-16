@@ -40,7 +40,6 @@
     <a href="page/game.html">Javascript Small Game</a>
     <a href="page/kkndme">kk 大神</a>
 </div>
-<div id="svga-wrap"></div>
 <h3 style="margin-top: 300px">
     我要评论:
 </h3>
@@ -50,23 +49,5 @@
 <script src='js/Valine.js'></script>
 <script src='js/public.js'></script>
 <script type="text/javascript" src="./js/svga.min.js"></script>
-
-<script>
-    new Valine({
-        el: '#vcomments',
-        appId: '262Vov2Lh3h7DS6FtCTk5AGm-gzGzoHsz',
-        appKey: '2GtlsNyiNqEBRkoPOvIUd9JR'
-    })
-
-    var player = new SVGA.Player('#svga-wrap');
-    var parser = new SVGA.Parser('#svga-wrap');
-    parser.load('./assets/home_algorithm.svga', function (videoItem) {
-        // player.loops = 2; // 循环次数
-        player.setVideoItem(videoItem);
-        player.startAnimation();
-        player.onFrame(function (i) {
-        });
-    })
-</script>
 </html>
 
