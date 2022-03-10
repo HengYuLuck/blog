@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f7b7d26-f2e0-464a-b10d-1db69480df5f" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23oVrPlOKEWDYtTpzc5Cb2exxiS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../work/zy-official-web" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\17610\Desktop\yinyueyu\blog" />
+      <recent name="D:\work\yinyueyu\blog\js" />
+      <recent name="D:\work\yinyueyu\blog\assets" />
+      <recent name="D:\work\yinyueyu\blog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\yinyueyu\blog\css" />
+      <recent name="D:\work\yinyueyu\blog\page" />
+      <recent name="D:\work\yinyueyu\blog" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f7b7d26-f2e0-464a-b10d-1db69480df5f" name="Default Changelist" comment="" />
+      <created>1642400625253</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642400625253</updated>
+      <workItem from="1642400627673" duration="8426000" />
+      <workItem from="1642484638260" duration="9504000" />
+      <workItem from="1642576664362" duration="11382000" />
+      <workItem from="1642670285386" duration="2449000" />
+      <workItem from="1642985247818" duration="6304000" />
+      <workItem from="1643448726874" duration="2669000" />
+      <workItem from="1644976534027" duration="8681000" />
+      <workItem from="1646185026527" duration="4130000" />
+      <workItem from="1646894337331" duration="1006000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1642401093696</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642401093696</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add jekyll page">
+      <created>1642403534872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642403534872</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove jekyll page">
+      <created>1642404682120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642404682120</updated>
+    </task>
+    <task id="LOCAL-00004" summary="添加 评论功能">
+      <created>1642407155067</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642407155067</updated>
+    </task>
+    <task id="LOCAL-00005" summary="添加 评论功能">
+      <created>1642408144053</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642408144053</updated>
+    </task>
+    <task id="LOCAL-00006" summary="禁用鼠标右键 &amp;&amp; F11， 添加 cat game">
+      <created>1642485231140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642485231140</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cat 代码加密">
+      <created>1642485533632</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642485533633</updated>
+    </task>
+    <task id="LOCAL-00008" summary="游戏添加">
+      <created>1642486781331</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642486781331</updated>
+    </task>
+    <task id="LOCAL-00009" summary="添加 天涯房产大神kkndme 神贴">
+      <created>1642577125360</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642577125360</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <created>1642579375437</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642579375437</updated>
+    </task>
+    <task id="LOCAL-00011" summary="天极爱 春联生成器">
+      <created>1642670718754</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642670718754</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test svga">
+      <created>1643449362088</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643449362088</updated>
+    </task>
+    <task id="LOCAL-00013" summary="remove svga">
+      <created>1644976613038</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1644976613038</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update">
+      <created>1646185145161</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1646185145161</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update">
+      <created>1646185157498</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1646185157498</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="add jekyll page" />
+    <MESSAGE value="remove jekyll page" />
+    <MESSAGE value="添加 评论功能" />
+    <MESSAGE value="禁用鼠标右键 &amp;&amp; F11， 添加 cat game" />
+    <MESSAGE value="cat 代码加密" />
+    <MESSAGE value="游戏添加" />
+    <MESSAGE value="添加 天涯房产大神kkndme 神贴" />
+    <MESSAGE value="天极爱 春联生成器" />
+    <MESSAGE value="test svga" />
+    <MESSAGE value="remove svga" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+</project>

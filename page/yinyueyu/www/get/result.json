@@ -1,0 +1,59 @@
+{
+    "header": [
+        " *   ",
+        " *   文件描述：本文件为请求参数，包括不限于网址、请求头、响应头、COOKIE、Referer、UserAgent",
+        " *   本文件仅为记录详细请求参数便于调试，非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq",
+        " *   "
+    ],
+    "directory": "guillaumegouessan-com-njhunnsj",
+    "options": {
+        "url": "https://guillaumegouessan.com/",
+        "index": "index.html",
+        "domain": "guillaumegouessan.com",
+        "origin": "https://guillaumegouessan.com",
+        "ipaddress": "13.33.211.69",
+        "originURL": "https://guillaumegouessan.com/",
+        "filenameGenerator": "byType",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "content-type": "text/html",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "last-modified": "Fri, 04 Dec 2020 15:57:35 GMT",
+                "server": "AmazonS3",
+                "content-encoding": "gzip",
+                "date": "Thu, 22 Apr 2021 03:29:04 GMT",
+                "etag": "W/\"fde0e0517d54f2c1633a8455481836a3\"",
+                "vary": "Accept-Encoding",
+                "x-cache": "Hit from cloudfront",
+                "via": "1.1 a8f6d439d4b35a734e48cf0ced363c2d.cloudfront.net (CloudFront)",
+                "x-amz-cf-pop": "NRT57-C2",
+                "x-amz-cf-id": "VA3tdPvcBII2Uaz_AK834U4YADwnBEp76Dm170hrt46R8G0OFfWKPQ=="
+            }
+        }
+    },
+    "user": {
+        "isWhite": false
+    },
+    "formatter": [
+        "css",
+        "saveOriginal"
+    ],
+    "time": {
+        "start": 1619062144027,
+        "end": 1619062147723,
+        "spend": 3.696
+    }
+}
